@@ -1,5 +1,15 @@
 @extends('layouts.template')
 @section('content')
+@if(session('success'))
+<div class = "alert alert-success">
+    {{ session('success') }}
+</div>
+@endif
+@if(session('error'))
+<div class = "alert alert-error">
+    {{ session('error') }}
+</div>
+@endif
 <title>Konsumen - Service</title>
 <form action="{{ url('/konsumen/serviceAdd') }}" method="post" class="p-3 mt-3">
 @csrf
@@ -8,10 +18,10 @@
     <div class="input-group-prepend">
       <label class="input-group-text" for="inputGroupSelect01">Penjahit</label>
     </div>
-    <select class="custom-select" id="inputGroupSelect01">
+    <select name="id_users_2" id="id_users_2" class="custom-select" id="inputGroupSelect01">
       <option name="id_users_2" id="id_users_2" selected>Pilih Penjahit</option>
       @foreach ($penjahit as $row)
-      <option name="id_users_2" id="id_users_2" value="{{ $row->nama }}">{{ $row->nama }}</option>
+      <option name="id_users_2" id="id_users_2" value="{{ $row->id_users }}">{{ $row->nama }}</option>
       @endforeach
     </select>
   </div>
@@ -59,19 +69,13 @@
 </div>
 <div class="input-group mb-3">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-default">Keterangan</span>
-    </div>
-    <input type="text" name="gambar" id="gambar" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-</div>
-{{-- <div class="input-group mb-3">
-    <div class="input-group-prepend">
       <span class="input-group-text" id="inputGroupFileAddon01">Gambar</span>
     </div>
     <div class="custom-file">
       <input type="file" class="custom-file-input" name="gambar" id="gambar" aria-describedby="inputGroupFileAddon01">
       <label class="custom-file-label" for="inputGroupFile01">Pilih Gambar</label>
     </div>
-</div> --}}
-<button type="button" class="btn btn-primary">Submit</button>
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
 </form>
 @endsection

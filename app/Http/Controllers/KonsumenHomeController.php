@@ -56,9 +56,9 @@ class KonsumenHomeController extends Controller
         ]);
 
         if($pesanan) {
-            return redirect('/konsumen/home')->with('success', 'Registration Succesfull! Please Login');
+            return redirect('/konsumen/service')->with('success', 'Order Success');
         } else {
-            return redirect('/konsumen/home')->with('error', 'Register Failed');
+            return redirect('/konsumen/service')->with('error', 'Order Failed');
         }
     }
 }
