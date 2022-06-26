@@ -29,10 +29,10 @@
             <input type="text" name="nama" id="nama" placeholder="Name">
         </div>
         <div class="input-group mb-3">
-            <select class="custom-select" id="inputGroupSelect02">
-              <option selected>Jenis Kelamin</option>
-              <option id="Laki-Laki" name="Laki-Laki" value="Laki-Laki">Laki-Laki</option>
-              <option id="Perempuan" name="Perempuan" value="Perempuan">Perempuan</option>
+            <select class="custom-select" id="jenis_kelamin" name="jenis_kelamin">
+              <option id="jenis_kelamin" name="jenis_kelamin" selected value="">Jenis Kelamin</option>
+              <option id="jenis_kelamin" name="jenis_kelamin" value="Laki-Laki">Laki-Laki</option>
+              <option id="jenis_kelamin" name="jenis_kelamin" value="Perempuan">Perempuan</option>
             </select>
         </div>
         <div class="form-field d-flex align-items-center">
@@ -44,10 +44,10 @@
             <input type="text" name="no_hp" id="no_hp" placeholder="Phone Number">
         </div>
         <div class="input-group mb-3">
-            <select class="custom-select" id="inputGroupSelect02">
-              <option selected>Roles</option>
-              <option id="konsumen" name="konsumen"value="konsumen">Konsumen</option>
-              <option id="penjahit" name="penjahit" value="penjahit">Penjahit</option>
+            <select class="custom-select" id="roles" name="roles">
+              <option id="roles" name="roles" selected value="">Roles</option>
+              <option id="roles" name="roles"value="konsumen">Konsumen</option>
+              <option id="roles" name="roles" value="penjahit">Penjahit</option>
             </select>
         </div>
         <button class="btn mt-3">Register</button>

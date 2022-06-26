@@ -87,7 +87,11 @@ class LoginController extends Controller
             'roles' => request('roles'),
         ]);
 
-        return redirect('/login')->with('success', 'Registration Succesfull! Please Login');
+        if($user) {
+            return redirect('/login')->with('success', 'Registration Succesfull! Please Login');
+        } else {
+            return redirect('/register')->with('error', 'Register Failed');
+        }
 
     }
 }
