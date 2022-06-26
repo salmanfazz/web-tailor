@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\KonsumenHomeController;
 use App\Http\Middleware\LoginMiddleware;
 use App\Http\Middleware\KonsumentMiddleware;
 use App\Http\Middleware\PenjahitMiddleware;
@@ -29,7 +30,8 @@ Route::middleware([LoginMiddleware::class])->group(function () {
 });
 
 Route::middleware([KonsumentMiddleware::class])->group(function () {
-	Route::get('konsumen/home', [LoginController::class,'indexKonsumen']);
+	Route::get('konsumen/home', [KonsumenHomeController::class,'indexKonsumen']);
+    Route::get('konsumen/service', [KonsumenHomeController::class,'service']);
 });
 
 Route::middleware([PenjahitMiddleware::class])->group(function () {

@@ -27,11 +27,6 @@ class LoginController extends Controller
     	return view('register');
     }
 
-    public function indexKonsumen()
-    {
-    	return view('konsumen');
-    }
-
     public function indexPenjahit()
     {
     	return view('penjahit');
@@ -48,6 +43,8 @@ class LoginController extends Controller
             if (Hash::check($password,$data->password)) {
                 Session::put('login',TRUE);
                 Session::put('id',$data->id);
+                Session::put('email',$data->email);
+                Session::put('no_hp',$data->no_hp);
                 Session::put('roles',$data->roles);
 
                 if (Session::get('roles') == 'konsumen') {
