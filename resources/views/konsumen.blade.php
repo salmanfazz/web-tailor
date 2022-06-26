@@ -1,5 +1,6 @@
 @extends('layouts.template')
 @section('content')
+<title>Konsumen - Home</title>
 <div class="row">
     <div class="col-md-4">
        <div id="hover_chang" class="service_box">
@@ -23,7 +24,7 @@
        </div>
     </div>
     <div class="col-md-12">
-       <a class="read_more" href="{{ url('service') }}">Order Now!</a>
+       <a class="read_more" href="{{ url('konsumen/service') }}">Order Now!</a>
     </div>
  </div>
 @endsection

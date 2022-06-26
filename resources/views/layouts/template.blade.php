@@ -8,7 +8,6 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Konsumen - Home</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -96,7 +95,7 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2> <img src="{{ asset('images/head.png') }}" alt="#"/> Our Services</h2>
+
                   </div>
                </div>
             </div>
