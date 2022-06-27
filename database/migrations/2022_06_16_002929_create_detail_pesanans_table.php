@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('detail_pesanans', function (Blueprint $table) {
             $table->increments('id_detail_pesanans');
-            $table->string('lingkar_dada');
-            $table->string('lingkar_pinggul');
-            $table->string('lingkar_pinggang');
-            $table->string('panjang_baju');
-            $table->string('panjang_lengan');
-            $table->string('panjang_celana');
+            $table->string('lingkar_dada')->nullable();
+            $table->string('lingkar_pinggul')->nullable();
+            $table->string('lingkar_pinggang')->nullable();
+            $table->string('panjang_baju')->nullable();
+            $table->string('panjang_lengan')->nullable();
+            $table->string('panjang_celana')->nullable();
             $table->string('keterangan');
             $table->text('gambar');
             $table->timestamps();

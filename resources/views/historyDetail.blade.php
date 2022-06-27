@@ -17,6 +17,10 @@
                                         <p>{{ $row->waktu_bayar }}</p>
                                     </div>
                                     <div class="col mb-3">
+                                        <p class="small text-muted mb-1">Penjahit</p>
+                                        <p>{{ $row->nama }}</p>
+                                    </div>
+                                    <div class="col mb-3">
                                         <p class="small text-muted mb-1">Order No.</p>
                                         <p>{{ $row->id_pesanans }}</p>
                                     </div>

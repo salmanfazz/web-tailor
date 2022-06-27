@@ -61,7 +61,7 @@
                                         <a class="nav-link" href="{{ url('konsumen/home') }}"> Home </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ url('konsumen/pembayaran') }}">Payment</a>
+                                        <a class="nav-link" href="{{ url('konsumen/payment') }}">Payment</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ url('konsumen/service') }}">Service</a>
@@ -70,7 +70,7 @@
                                         <a class="nav-link" href="{{ url('konsumen/history') }}">History</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#contact">Contact Us</a>
+                                        <a class="nav-link" href="#contact">Information</a>
                                     </li>
                                 </ul>
                             </div>
@@ -126,19 +126,14 @@
                                     <a href="#"><img src="{{ asset('images/logo.png') }}"
                                             alt="#" /></a>
                                     <p>S Tailor menyediakan layanan pembuatan baju secara online yang mempermudah anda
-                                        untuk membuat baju dimanapun dan kapanpun menggunakan aplikasi</p>
+                                        untuk membuat baju dimanapun dan kapanpun.</p>
                                 </div>
                             </div>
                             <div class="col-md-5 padd_bottom padd_bott">
                                 <div class="heading3">
-                                    <h3>Contact Us</h3>
+                                    <h3>Service</h3>
                                     <ul class="infometion">
-                                        <li><a href="#">Donec odio. Quisque </a></li>
-                                        <li><a href="#">volutpat mattis</a></li>
-                                        <li><a href="#">eros.Lorem ipsum dolor</a></li>
-                                        <li><a href="#">sit amet, consectetuer </a></li>
-                                        <li><a href="#">adipiscing elit. Donec </a></li>
-                                        <li><a href="#">odio. Quisque volutpat </a></li>
+                                        <li><a href="">Produk diatas adalah produk unggalan yang dapat kami tawarkan kepada anda. Kami memberikan jaminan layanan tepat waktu apabila anda memesan produk andalan kami.</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -148,27 +143,17 @@
                         <div class="row">
                             <div class="col-md-6 offset-md-1 padd_bottom">
                                 <div class="heading3">
-                                    <h3>INFORMATION</h3>
+                                    <h3>Information</h3>
                                     <ul class="infometion">
-                                        <li><a href="#">Donec odio. Quisque </a></li>
-                                        <li><a href="#">volutpat mattis</a></li>
-                                        <li><a href="#">eros.Lorem ipsum dolor</a></li>
-                                        <li><a href="#">sit amet, consectetuer </a></li>
-                                        <li><a href="#">adipiscing elit. Donec </a></li>
-                                        <li><a href="#">odio. Quisque volutpat </a></li>
+                                        <li><a href="">Selain produk unggulan diatas, kami juga dapat mengerjakan model atau jenis baju dapat disesuaikan dengan keinginan anda dengan cara memberikan contoh model atau jenis berupa gambar dari rancangan yang telah anda buat lalu kami akan mengerjakannya sesuai dengan rancangan yang telah diberikan.</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-5">
                                 <div class="heading3">
-                                    <h3>MY ACCOUNT</h3>
+                                    <h3>About S Tailor</h3>
                                     <ul class="infometion">
-                                        <li><a href="#">Donec odio. Quisque </a></li>
-                                        <li><a href="#">volutpat mattis</a></li>
-                                        <li><a href="#">eros.Lorem ipsum dolor</a></li>
-                                        <li><a href="#">sit amet, consectetuer </a></li>
-                                        <li><a href="#">adipiscing elit. Donec </a></li>
-                                        <li><a href="#">odio. Quisque volutpat </a></li>
+                                        <li><a href="">Penjahit yang kami sediakan memiliki standar kemampuan yang tinggi karena telah dilatih serta berpengalaman dalam membuat berbagai pesanan.</a></li>
                                     </ul>
                                 </div>
                             </div>

@@ -35,6 +35,9 @@ Route::middleware([KonsumentMiddleware::class])->group(function () {
     Route::post('konsumen/serviceAdd', [KonsumenHomeController::class,'serviceAdd']);
     Route::get('konsumen/history', [KonsumenHomeController::class,'history']);
     Route::get('konsumen/historyDetail/{id_pesanans}', [KonsumenHomeController::class,'historyDetail']);
+    Route::get('konsumen/payment', [KonsumenHomeController::class,'payment']);
+    Route::get('konsumen/paymentDetail/{id_pesanans}', [KonsumenHomeController::class,'paymentDetail']);
+    Route::post('konsumen/paymentSet/{id_pesanans}', [KonsumenHomeController::class,'paymentSet']);
 });
 
 Route::middleware([PenjahitMiddleware::class])->group(function () {
