@@ -3,15 +3,15 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" rel="stylesheet">
 <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
-@if(session('success'))
-<div class = "alert alert-success">
-    {{ session('success') }}
-</div>
+@if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
 @endif
-@if(session('error'))
-<div class = "alert alert-error">
-    {{ session('error') }}
-</div>
+@if (session('error'))
+    <div class="alert alert-error">
+        {{ session('error') }}
+    </div>
 @endif
 
 <div class="wrapper">
@@ -22,7 +22,7 @@
         S-Tailor
     </div>
     <form action="{{ url('/loginPost') }}" method="post" class="p-3 mt-3">
-    @csrf
+        @csrf
         <div class="form-field d-flex align-items-center">
             <span class="far fa-user"></span>
             <input type="text" name="email" id="email" placeholder="Email">
@@ -34,6 +34,6 @@
         <button class="btn mt-3">Login</button>
     </form>
     <div class="text-center fs-6">
-        <a href="{{url('/register')}}">Sign up</a>
+        <a href="{{ url('/register') }}">Sign up</a>
     </div>
 </div>

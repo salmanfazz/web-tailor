@@ -37,9 +37,7 @@
                                         <td><span class="badge badge">{{ $row->status }}</span></td>
                                         <td>{{ $row->total_bayar }}</td>
                                         <td>{{ $row->waktu_bayar }}</td>
-                                        <td><a type="button"
-                                                href="{{ url('konsumen/historyDetail/' . $row->id_pesanans) }}"
-                                                class="fa fa-ellipsis-h text-black-50"></a></td>
+                                        <td><a type="button" href="{{ url('konsumen/historyDetail/' . $row->id_pesanans) }}" class="fa fa-ellipsis-h text-black-50"></a></td>
                                     </tr>
                                 </tbody>
                             @endforeach
