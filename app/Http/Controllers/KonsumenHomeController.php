@@ -25,8 +25,24 @@ class KonsumenHomeController extends Controller
         ->join('pembayarans', 'pesanans.id_pesanans', '=', 'pembayarans.id_pesanans')
         ->where('users.roles', '=', 'penjahit')
         ->where('pesanans.id_users_1', '=' , $request->session()->get('id_users', 'id_users'))
+        ->where('pembayarans.status', '=', 'Belum Dibayar')
         ->get();
         return view('history', $data);
+    }
+
+    public function historyDetail(Request $request, $id_pesanans)
+    {
+    	$data['pesanan'] = DB::table('pesanans')
+        ->select('pesanans.id_pesanans', 'users.nama','pesanans.id_users_1', 'pesanans.id_users_2', 'detail_pesanans.lingkar_dada', 'detail_pesanans.lingkar_pinggul', 'detail_pesanans.lingkar_pinggang', 'detail_pesanans.panjang_baju', 'detail_pesanans.panjang_lengan', 'detail_pesanans.panjang_celana', 'detail_pesanans.keterangan', 'detail_pesanans.gambar', 'pembayarans.waktu_bayar', 'pembayarans.total_bayar', 'pembayarans.status')
+        ->join('detail_pesanans', 'detail_pesanans.id_detail_pesanans', '=', 'pesanans.id_detail_pesanans')
+        ->join('users', 'users.id_users', '=', 'pesanans.id_users_2')
+        ->join('pembayarans', 'pesanans.id_pesanans', '=', 'pembayarans.id_pesanans')
+        ->where('users.roles', '=', 'penjahit')
+        ->where('pesanans.id_users_1', '=' , $request->session()->get('id_users', 'id_users'))
+        ->where('pembayarans.status', '=', 'Selesai')
+        ->where('pesanans.id_pesanans', '=', $id_pesanans)
+        ->get();
+        return view('historyDetail', $data);
     }
 
     public function service()
@@ -71,11 +87,10 @@ class KonsumenHomeController extends Controller
 
         $pembayaran = History::create([
             'id_pesanans' => $pesanan->id_pesanans,
-            'total_bayar' => ' ',
             'status' => 'Belum Dibayar'
         ]);
 
-        if($pesanan) {
+        if($pembayaran) {
             return redirect('/konsumen/service')->with('success', 'Order Success');
         } else {
             return redirect('/konsumen/service')->with('error', 'Order Failed');

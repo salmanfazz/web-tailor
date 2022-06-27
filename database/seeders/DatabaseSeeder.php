@@ -55,7 +55,7 @@ class DatabaseSeeder extends Seeder
             'id_pesanans' => '1',
             'waktu_bayar' => '2022-06-27 13:48:48',
             'total_bayar' => '300000',
-            'status' => 'Belum Dibayar'
+            'status' => 'Selesai'
         ]);
     }
 }
