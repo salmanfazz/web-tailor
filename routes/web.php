@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\KonsumenHomeController;
+use App\Http\Controllers\PesananController;
+use App\Http\Controllers\DetailPesananController;
+use App\Http\Controllers\PembayaranController;
 use App\Http\Middleware\LoginMiddleware;
 use App\Http\Middleware\KonsumentMiddleware;
 use App\Http\Middleware\PenjahitMiddleware;
@@ -31,13 +34,13 @@ Route::middleware([LoginMiddleware::class])->group(function () {
 
 Route::middleware([KonsumentMiddleware::class])->group(function () {
 	Route::get('konsumen/home', [KonsumenHomeController::class,'indexKonsumen']);
-    Route::get('konsumen/service', [KonsumenHomeController::class,'service']);
-    Route::post('konsumen/serviceAdd', [KonsumenHomeController::class,'serviceAdd']);
-    Route::get('konsumen/history', [KonsumenHomeController::class,'history']);
-    Route::get('konsumen/historyDetail/{id_pesanans}', [KonsumenHomeController::class,'historyDetail']);
-    Route::get('konsumen/payment', [KonsumenHomeController::class,'payment']);
-    Route::get('konsumen/paymentDetail/{id_pesanans}', [KonsumenHomeController::class,'paymentDetail']);
-    Route::post('konsumen/paymentSet/{id_pesanans}', [KonsumenHomeController::class,'paymentSet']);
+    Route::get('konsumen/service', [PesananController::class,'service']);
+    Route::post('konsumen/serviceAdd', [PesananController::class,'serviceAdd']);
+    Route::get('konsumen/history', [DetailPesananController::class,'history']);
+    Route::get('konsumen/historyDetail/{id_pesanans}', [DetailPesananController::class,'historyDetail']);
+    Route::get('konsumen/payment', [PembayaranController::class,'payment']);
+    Route::get('konsumen/paymentDetail/{id_pesanans}', [PembayaranController::class,'paymentDetail']);
+    Route::post('konsumen/paymentSet/{id_pesanans}', [PembayaranController::class,'paymentSet']);
 });
 
 Route::middleware([PenjahitMiddleware::class])->group(function () {
