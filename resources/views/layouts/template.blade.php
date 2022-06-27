@@ -23,6 +23,10 @@
       <link rel="stylesheet" href="{{ asset('css/jquery.mCustomScrollbar.min.css') }}">
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -58,7 +62,7 @@
                                  <a class="nav-link" href="{{ url('konsumen/service') }}">Service</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="#customer">Customer</a>
+                                 <a class="nav-link" href="{{ url('konsumen/history') }}">History</a>
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link" href="#contact">Contact Us</a>

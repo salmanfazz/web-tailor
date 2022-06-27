@@ -33,5 +33,29 @@ class DatabaseSeeder extends Seeder
             'no_hp' => '089649799654',
         	'roles' => 'penjahit'
 		]);
+
+        \App\Models\DetailPesanan::create([
+            'lingkar_dada' => '90',
+            'lingkar_pinggul' => '-',
+            'lingkar_pinggang' => '80',
+            'panjang_baju' => '50',
+            'panjang_lengan' => '56',
+            'panjang_celana' => '50',
+            'keterangan' => 'Seifuku',
+            'gambar' => 'bg.png'
+        ]);
+
+        \App\Models\Pesanan::create([
+            'id_users_1' => '1',
+            'id_users_2' => '2',
+            'id_detail_pesanans' => '1'
+        ]);
+
+        \App\Models\History::create([
+            'id_pesanans' => '1',
+            'waktu_bayar' => '2022-06-27 13:48:48',
+            'total_bayar' => '300000',
+            'status' => 'Belum Dibayar'
+        ]);
     }
 }

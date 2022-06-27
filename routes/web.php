@@ -33,6 +33,7 @@ Route::middleware([KonsumentMiddleware::class])->group(function () {
 	Route::get('konsumen/home', [KonsumenHomeController::class,'indexKonsumen']);
     Route::get('konsumen/service', [KonsumenHomeController::class,'service']);
     Route::post('konsumen/serviceAdd', [KonsumenHomeController::class,'serviceAdd']);
+    Route::get('konsumen/history', [KonsumenHomeController::class,'history']);
 });
 
 Route::middleware([PenjahitMiddleware::class])->group(function () {
