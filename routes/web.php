@@ -46,4 +46,9 @@ Route::middleware([KonsumentMiddleware::class])->group(function () {
 
 Route::middleware([PenjahitMiddleware::class])->group(function () {
 	Route::get('penjahit/home', [PenjahitHomeController::class,'indexPenjahit']);
+    Route::get('penjahit/servicePenjahit', [PenjahitHomeController::class,'servicePenjahit']);
+    Route::get('penjahit/serviceDetail/{id_pesanans}', [PenjahitHomeController::class,'serviceDetail']);
+    Route::post('penjahit/serviceSet/{id_pesanans}', [PenjahitHomeController::class,'serviceSet']);
+    Route::get('penjahit/historyPenjahit', [PenjahitHomeController::class,'historyPenjahit']);
+    Route::get('penjahit/historyPenjahitDetail/{id_pesanans}', [PenjahitHomeController::class,'historyPenjahitDetail']);
 });

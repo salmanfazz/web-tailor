@@ -14,7 +14,7 @@
                                             <div class="inner-circle"></div>
                                         </div>
                                     </th>
-                                    <th>Pesanan #</th>
+                                    <th>#</th>
                                     <th>Penjahit</th>
                                     <th>Keterangan</th>
                                     <th>Status Bayar</th>
@@ -31,7 +31,7 @@
                                                 <div class="inner-circle"></div>
                                             </div>
                                         </td>
-                                        <td>{{ $row->id_pesanans }}</td>
+                                        <td> {{ isset($i) ? ++$i : $i = 1 }} </td>
                                         <td>{{ $row->nama }}</td>
                                         <td>{{ $row->keterangan }}</td>
                                         <td><span class="badge badge">{{ $row->status }}</span></td>
