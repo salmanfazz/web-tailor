@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\KonsumenHomeController;
 use App\Http\Controllers\PesananController;
 use App\Http\Controllers\DetailPesananController;
+use App\Http\Controllers\PenjahitHomeController;
 use App\Http\Controllers\PembayaranController;
 use App\Http\Middleware\LoginMiddleware;
 use App\Http\Middleware\KonsumentMiddleware;
@@ -44,5 +45,5 @@ Route::middleware([KonsumentMiddleware::class])->group(function () {
 });
 
 Route::middleware([PenjahitMiddleware::class])->group(function () {
-	Route::get('penjahit/home', [LoginController::class,'indexPenjahit']);
+	Route::get('penjahit/home', [PenjahitHomeController::class,'indexPenjahit']);
 });

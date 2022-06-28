@@ -1,6 +1,6 @@
 @extends('layouts.template')
 @section('content')
-    <title>Konsumen - History</title>
+    <title>Konsumen - Payment</title>
     <div class="container mt-5">
         <div class="d-flex justify-content-center row">
             <div class="col-md-10">

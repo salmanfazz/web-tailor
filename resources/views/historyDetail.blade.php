@@ -1,7 +1,6 @@
 @extends('layouts.template')
 @section('content')
-    <title>Konsumen - History</title>
-    <title>Konsumen - History</title>
+    <title>Konsumen - History Detail</title>
     <section class="h-100 h-custom" style="background-color: #eee;">
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">

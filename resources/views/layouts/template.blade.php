@@ -80,7 +80,7 @@
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo">
-                                    <a href="index.html"><img src="{{ asset('images/logo.png') }}"
+                                    <a href=""><img src="{{ asset('images/logo.png') }}"
                                             alt="#" /></a>
                                 </div>
                             </div>
