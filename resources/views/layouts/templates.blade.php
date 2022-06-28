@@ -152,7 +152,7 @@
     <!--Menu sidebar -->
     <script src="{{ asset('js/sidebarmenu.js') }}"></script>
     <!--Custom JavaScript -->
-    <script src="{{ asset('js/custom.js') }}"></script>
+    <script src="{{ asset('js/custom_admin.js') }}"></script>
     <!--This page JavaScript -->
     <!--chartis chart-->
     <script src="{{ asset('plugins/bower_components/chartist/dist/chartist.min.js') }}"></script>
