@@ -93,7 +93,7 @@
 			type: 'bar',
 			// The data for our dataset
 			data: {
-				labels: ['Total','Selesai','Selesai'],
+				labels: ['Total','Selesai','Pending'],
 				datasets: [{
 					label: 'Grafik Data',
 					backgroundColor: 'rgb(255, 99, 132)',
